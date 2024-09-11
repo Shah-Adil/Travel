@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book your stay</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/slick.css">
+  </head>
+  <body>
+    <!-- ---header section start---- -->
+    <header>
+      <div class="container">
+        <div class="header-body">
+          <div class="logo">
+            <a href="index.html">
+              <img src="img/icon2.png" alt="" />
+            </a>
+          </div>
+          <nav class="header-item">
+            <ul class="navbar m-0 p-0">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="book.html">Book Your Stay</a></li>
+              <li><a href="about.html">About</a></li>
+              <li>
+                <a href="#">Our Services <i class="fa-solid fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                  <li><a href="service.html">Short term rentals</a></li>
+                  <li><a href="service.html">Corporate housing</a></li>
+                  <li><a href="service.html">Travel nurses</a></li>
+                </ul>
+              </li>
+              <li><a href="service.html">Insurance Solutions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <i class="fa-solid fa-bars-staggered" id="menu-btn"></i>
+        </div>
+      </div>
+    </header>
+    <!-- ---header section End------ -->
+     <!-- --banner sec start----- -->
+      <div class="banner-sec d-flex align-items-center text-center" style="background: linear-gradient(#00000070 , #00000050)  ,  url(./img/book.jpg); 
+      background-size: cover; background-repeat: no-repeat; 
+       height: 700px;  background-position: center; border-radius:  0  0 50px 50px ;">
+        <div class="container">
+          <h2  class="book-title">Book Your Stay</h2>
+          <form class="room-search">
+            <div class="search-input">
+              <i class="fa-solid fa-location-dot"></i>
+              <select name="filterLocation">
+                <option value="">Location</option>
+                <option value="Sylhet">Sylhet</option>
+                <option value="Dhaka">Dhaka</option>
+                <option value="Chottogram">Chottogram</option>
+                <option value="Borishal">Borishal</option>
+              </select>
+            </div>
+            <div class="search-input ">
+              <i class="fa-solid fa-calendar-days"></i>
+              <div class="ch-in">
+                <label for="" class="d-block">Check-In</label>
+                <input type="date">
+              </div>
+              
+            </div>
+            <div class="search-input ">
+              <i class="fa-solid fa-calendar-days"></i>
+              <div class="ch-in">
+                <label for="" class="d-block ">Check-Out</label>
+                <input type="date">
+              </div>
+            </div>
+            <div class="search-input"  data-bs-toggle="modal" data-bs-target="#exampleModal" >
+             
+                <i class="fa-solid fa-users"></i>
+            
+              <div class="guest-i">
+                <label for="" class="d-block">Guest</label>
+                <input type="number" value="1">
+              </div>
+              <div class="guest-select">
+                <!-- Button trigger modal -->
+                
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="input-group w-auto justify-content-end align-items-center">
+                          <input type="button" value="-" class="button-minus border rounded-circle  icon-shape icon-sm mx-1 " onclick="mina()" data-field="quantity">
+                          <input type="number" step="1" min="1" max="10" value="1" name="quantity" id="quantity-field" class="quantity-field border-0 text-center w-25">
+                          <input type="button" value="+" class="button-plus border rounded-circle icon-shape icon-sm " onclick="plus()" data-field="quantity">
+                       </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <button class="sub-btn w-100" type="submit" style="background: var(--title-color);">Search</button>
+          </form>
+          <div class="check">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="flexCheckDefault1">
+              <label class="form-check-label" for="flexCheckDefault1">
+                Default checkbox
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox"  id="flexCheckChecked2" checked>
+              <label class="form-check-label" for="flexCheckChecked2">
+                Checked checkbox
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox"  id="flexCheckChecked3" checked>
+              <label class="form-check-label" for="flexCheckChecked3">
+                Checked checkbox
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- --banner sec end------- -->
+      <!-- ---top propertise sec start------ -->
+       <div class="propert-sec">
+        <div class="container">
+          <h1 class="props-title">Our Top Properties</h1>
+          <div class="propert-body row">
+            <div class="propert-item col-4">
+             
+              <div class="test-img  image-card-slider" >
+                <div class="">
+                  <img src="img/pro.webp" alt="">
+                </div>
+                <div class="">
+                  <img src="img/pro1.webp" alt="">
+                </div>
+                <div class="">
+                  <img src="img/pro2.webp" alt="">
+                </div>
+                <div class="">
+                  <img src="img/pro3.webp" alt="">
+                </div>
+                <div class="">
+                  <img src="img/pro1.webp" alt="">
+                </div>
+              </div>
+                <a href="#" class="test-text-main">
+                  <h2>02 Perfect for Businesses!</h2>
+                  <span>8 july. 3 Bedrooms. 2baths</span>
+                  
+                  <ul class="fea-ul">
+                    <li>House </li>
+                    <li>Air conditioning </li>
+                    <li>Washing Machine </li>
+
+                  </ul>
+                </a>
+              </div>
+              <div class="propert-item col-4">
+             
+                <div class="test-img  image-card-slider" >
+                  <div class="">
+                    <img src="img/pro.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro2.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro3.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                </div>
+                  <a href="#" class="test-text-main">
+                    <h2>02 Perfect for Businesses!</h2>
+                    <span>8 july. 3 Bedrooms. 2baths</span>
+                    
+                    <ul class="fea-ul">
+                      <li>House </li>
+                      <li>Air conditioning </li>
+                      <li>Washing Machine </li>
+  
+                    </ul>
+                  </a>
+              </div>
+              <div class="propert-item col-4">
+             
+                <div class="test-img  image-card-slider" >
+                  <div class="">
+                    <img src="img/pro.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro2.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro3.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                </div>
+                  <a href="#" class="test-text-main">
+                    <h2>02 Perfect for Businesses!</h2>
+                    <span>8 july. 3 Bedrooms. 2baths</span>
+                    
+                    <ul class="fea-ul">
+                      <li>House </li>
+                      <li>Air conditioning </li>
+                      <li>Washing Machine </li>
+  
+                    </ul>
+                  </a>
+              </div>
+           
+              <div class="propert-item col-4">
+             
+                <div class="test-img  image-card-slider" >
+                  <div class="">
+                    <img src="img/pro.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro2.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro3.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                </div>
+                  <a href="#" class="test-text-main">
+                    <h2>02 Perfect for Businesses!</h2>
+                    <span>8 july. 3 Bedrooms. 2baths</span>
+                    
+                    <ul class="fea-ul">
+                      <li>House </li>
+                      <li>Air conditioning </li>
+                      <li>Washing Machine </li>
+  
+                    </ul>
+                  </a>
+              </div>
+           
+              <div class="propert-item col-4">
+             
+                <div class="test-img  image-card-slider" >
+                  <div class="">
+                    <img src="img/pro.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro2.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro3.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                </div>
+                  <a href="#" class="test-text-main">
+                    <h2>02 Perfect for Businesses!</h2>
+                    <span>8 july. 3 Bedrooms. 2baths</span>
+                    
+                    <ul class="fea-ul">
+                      <li>House </li>
+                      <li>Air conditioning </li>
+                      <li>Washing Machine </li>
+  
+                    </ul>
+                  </a>
+              </div>
+           
+              <div class="propert-item col-4">
+             
+                <div class="test-img  image-card-slider" >
+                  <div class="">
+                    <img src="img/pro.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro2.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro3.webp" alt="">
+                  </div>
+                  <div class="">
+                    <img src="img/pro1.webp" alt="">
+                  </div>
+                </div>
+                  <a href="#" class="test-text-main">
+                    <h2>02 Perfect for Businesses!</h2>
+                    <span>8 july. 3 Bedrooms. 2baths</span>
+                    
+                    <ul class="fea-ul">
+                      <li>House </li>
+                      <li>Air conditioning </li>
+                      <li>Washing Machine </li>
+  
+                    </ul>
+                  </a>
+              </div>
+           
+           
+          </div>
+
+          <div class="mt-4 mb-5  text-center">
+            <a href="book-more.html" class="sub-btn">Explore all properties</a>
+          </div>
+
+      
+          </div>
+        </div>
+      
+      <!-- ---top propertise sec End-------- -->
+    <!-- ---footer sec start----- -->
+    <div class="property-sec footer-sec" style="background-color: #27285C;">
+      <div class="container">
+        <div class="footer-body">
+          <div class="footer-item">
+            <h4>About Us</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi
+              incidunt aperiam soluta id itaque. Repellat illo laudantium
+              voluptates voluptatum dignissimos.
+            </p>
+          </div>
+          <div class="footer-item">
+            <h4>Usefull Link</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Book Your Stay</a></li>
+              <li><a href="#">Our Services</a></li>
+              <li><a href="#">Insurance Solutions</a></li>
+            </ul>
+          </div>
+          <div class="footer-item social-icon">
+            <h4>Social Link</h4>
+            <ul>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---footer sec End------- -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+      $('.image-card-slider').slick({
+        dots: true,
+        infinite: true,
+        speed: 500,
+        arrows: true ,
+      });
+
+      
+    </script>
+    
+    
+  </body>
+</html>
